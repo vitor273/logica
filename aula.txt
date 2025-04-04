@@ -1,0 +1,39 @@
+
+exerciseo 4
+
+using static System.Console;
+WriteLine("digite o valor de 1 a7 dias da semana");
+int dia;
+dia = Convert.ToInt32(ReadLine());
+
+
+switch (dia )
+{
+    case 1: WriteLine("domingo");
+		break;
+
+    case 2:
+    WriteLine ("segundA");
+    break;
+
+    case 3:
+    WriteLine("TERÇA");
+    break;
+
+    case 4:
+    WriteLine("QUARTA");
+    break;
+
+    case 5:
+    WriteLine("QUINTA");
+    break;
+
+    case 6:
+    WriteLine("SEXTA");
+    break;
+
+    case 7:
+    WriteLine("SABADO");
+    break;
+}
+ReadLine();
