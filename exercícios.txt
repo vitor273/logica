@@ -1,0 +1,59 @@
+exerciseo2
+using static System.Console;
+int idade;
+
+idade =Convert.ToInt32(ReadLine());
+
+
+if (idade<12 )
+{
+    WriteLine($" uma criança");
+
+}
+else
+{
+
+    WriteLine($"e um adolecente");
+}
+if (idade<17)
+{
+    WriteLine($"e um adolecente");
+
+}
+else
+{
+    WriteLine($" um adulto");
+}
+if (idade < 50)
+{
+    WriteLine($"adulto");
+
+}
+else
+{
+    WriteLine($" um velho");
+}
+ReadLine();
+
+exerciseo 1
+
+int n1 = 2;
+if (4 % n1==0)
+{
+    WriteLine($"  e um numero par");
+}
+else
+{
+ WriteLine($" e um numero impar");
+}
+ReadLine();
+int n1 = 2;
+if (4 % n1==0)
+{
+    WriteLine($"  e um numero par");
+}
+else
+{
+ WriteLine($" e um numero impar");
+}
+ReadLine();
