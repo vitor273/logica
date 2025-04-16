@@ -1,3 +1,5 @@
+LOGICA DE PROGRAMAÇAO LISTA
+
 exerciseo2
 using static System.Console;
 int idade;
@@ -52,8 +54,17 @@ if (4 % n1==0)
 {
     WriteLine($"  e um numero par");
 }
-else
-{
+else{
  WriteLine($" e um numero impar");
 }
 ReadLine();
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+LOGICA DE PROGRAMAÇAO: LISTA
+
+
