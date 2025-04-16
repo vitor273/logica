@@ -37,7 +37,7 @@ switch (dia )
 }
 ReadLine();
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
 
 
 using static System.Console;
@@ -65,3 +65,198 @@ else
     WriteLine($"valor da compra: {vc}\nvalor com desconto: {vcd:f2}");
 }
 ReadLine();
+
+
+using static System.Console;
+int ano = 2024;
+
+if ((ano % 4 == 0 && ano % 100 == 0) || ano % 400 == 0)
+   
+
+    WriteLine($"{ano} e bisexto");
+
+else
+{
+    WriteLine($"{ano} nao e bisexto");
+}
+ReadLine();
+-----------------------------------------------------------------------------
+EXERCISEO 2
+
+double n1, n2, resultado;
+char operaçao;
+
+WriteLine("calculadora");
+WriteLine("digite o 1 valor");
+n1 = Convert.ToDouble(ReadLine());
+WriteLine("digite o 2 valor");
+n2 = Convert.ToDouble(ReadLine());
+operaçao = Convert.ToChar(ReadLine());
+
+switch (operaçao)
+{
+    case '1':
+        resultado = n1 + n2;
+        WriteLine($"o resultado foi {resultado:F2}");
+        break;
+    case '2':
+        resultado = n1 - n2;
+        WriteLine($"o resultado foi {resultado:F2}");
+        break;
+    case '3':
+        resultado = n1 * n2;
+        WriteLine($"o resultado foi {resultado:F2}");
+        break;
+    case '4':
+        resultado = n1 / n2;
+        WriteLine($"o resultado foi {resultado:F2}");
+        break;
+}
+-----------------------------------------------------------------------------
+EXERCISEO 3
+
+using static System.Console;
+
+int N1 = 10 ,n2 = 13, n3 = 20, MAIOR;
+    if (N1 > n2 && N1 >n3)
+	{
+    MAIOR = N1;
+}
+else if (n2 > N1 && n2 > n3)
+{
+    MAIOR = n2;
+}
+else
+{
+    MAIOR = n3;
+}
+
+WriteLine($"o maior numero e {MAIOR}");
+
+-----------------------------------------------------------------------------
+EXERCISEO 4
+
+
+int N1 = 14 ,n2 = 50, n3 = 20, MAIOR;
+    if (N1 + n2 > n3 && N1 + n3 > n2)
+	{
+    WriteLine($"os lados forman um triangulo valido");
+}
+else
+{
+    WriteLine($"os lados nao forman um triangulo valido");
+}
+
+ReadLine();
+
+-----------------------------------------------------------------------------
+EXERCISEO 5
+
+double nota = 7;
+string conceito;
+
+switch (nota)
+
+{
+	case 10:
+	case 9:
+		conceito = "a";
+		break;
+
+        case 8.9:
+	case 7:
+        conceito = "b";
+        break;
+
+
+           case 6.9:
+	case 5:
+        conceito = "c";
+        break;
+
+            case 4.9:
+	case 0:
+        conceito = "d";
+        break;
+}
+WriteLine($"Nota: {nota} " );
+
+
+using static System.Console;
+List<int> numberList = new List<int>();
+numberList.Add(23);
+numberList.Add(34);
+numberList.Add(73);
+foreach (var item in numberList)
+{
+    WriteLine(item);
+}
+ReadKey();
+
+
+using static System.Console;
+
+List<int> numberList = new List<int>();
+numberList.Add(23);
+numberList.Add(34);
+numberList.Add(73);
+numberList.Insert(3, 600000);
+numberList.Add(90);
+numberList.Sort();
+foreach (var item in numberList)
+{
+    WriteLine(item);
+}
+WriteLine("2 elemento da Lista:" + numberList[1].ToString());
+WriteLine("numero de elemento na Lista:" + numberList.Count());
+WriteLine("capacidade da minha lista" + numberList.Capacity);
+numberList.Remove(90);
+numberList.Remove(0);
+numberList.Reverse();
+
+foreach (var item in numberList)
+{
+    WriteLine(item);
+}
+WriteLine("elemento da posiçao 0:" + numberList[0]);
+int number = numberList.IndexOf(1000);
+if (number >= 0)
+{
+    WriteLine("o numero encomtrado esta na posiçao :" + number);
+}
+else
+{
+    WriteLine("elemento nao encontrado");
+}
+foreach (var item in numberList)
+{
+    WriteLine(item);
+}
+foreach (var item in numberList)
+{
+    WriteLine(item);
+}
+numberList.Sort();
+foreach (var item in numberList)
+{
+    WriteLine(item);
+}
+foreach (var item in numberList)
+{
+    WriteLine(item);
+}
+foreach (var item in numberList)
+{
+    WriteLine(item);
+}
+foreach (var item in numberList)
+{
+    WriteLine(item);
+}
+foreach (var item in numberList)
+{
+    WriteLine(item);
+}
+
+ReadKey();
+
