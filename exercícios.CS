@@ -391,6 +391,7 @@ WriteLine($"Media: {M}");
 ReadLine();
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------                                                                                                       CLASS 
+                                                                                          class
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 using static System.Console;
 
@@ -423,6 +424,80 @@ class cool {
         int ano = Convert.ToInt32(ReadLine());
         WriteLine($"a sua idade {colina(ano)}");
 
+
+    }
+}
+
+
+
+
+
+using static System.Console;
+
+class cool { 
+    public static void colina(string[]opitions) {
+        foreach (string item in opitions)
+        {
+            WriteLine(item);
+        }
+        WriteLine("escolha sua opçao");
+    }
+    public static void option1(){ WriteLine("executando a opçao 1..."); }
+        public static void option2() { WriteLine("executando a opçao 2..."); }
+        public static void option3() { WriteLine("executando a opçao 3..."); }
+    private static void Exit()
+    {
+        ForegroundColor = ConsoleColor.Blue;
+       
+        WriteLine("ta processando calma ai!!!!");
+        ForegroundColor = ConsoleColor.Black;
+        Environment.Exit(0);
+       
+    }
+    public static void Main(string[] args)
+    {
+        Title = "hack";
+        ForegroundColor = ConsoleColor.Green;
+        WriteLine("<<<<<menu>>>>>>");
+        string[] opition = { "1 - free fire", "2 - pubg", "3 - fornite", "4 - sub surf", "5 - fnf", };
+        int option = 0;
+        while (true)
+        {
+            colina(opition);
+            try
+            {
+                ForegroundColor = ConsoleColor.Red;
+                option = Convert.ToInt32(ReadLine());
+            }
+            catch (System.FormatException)
+            {
+                ForegroundColor = ConsoleColor.Blue;
+                WriteLine("por favor, digite uma opçao entre 1 e" + opition.Length);
+
+            }
+
+
+            switch (option)
+            {
+                case 1:
+                    option1();
+                    break;
+                case 2:
+                    option2();
+                    break;
+                case 3:
+                    option3();
+                    break;
+                case 4:
+                    Exit();
+                    break;
+                default:
+                    WriteLine("porfavor, digite uma opçao entre 1 e" + opition.Length);
+                    break;
+                   
+            }
+        }
+        
 
     }
 }
