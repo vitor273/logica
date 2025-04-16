@@ -390,4 +390,39 @@ WriteLine($"Media: {M}");
 
 ReadLine();
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------                                                                                                       CLASS 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+using static System.Console;
 
+class cool { 
+    public static int colina(int num) {
+        return DateTime.Today.Year - num;
+    }
+    static void Main()
+    {
+        WriteLine("digite o ano que vc nasceu");
+        int ano = Convert.ToInt32(ReadLine());
+        WriteLine($"a sua idade {colina(ano)}");
+
+
+    }
+}
+
+
+
+
+using static System.Console;
+
+class cool { 
+    public static int colina(int num) {
+        return DateTime.Today.Year - num;
+    }
+    static void Main()
+    {
+        WriteLine("digite o ano que vc nasceu");
+        int ano = Convert.ToInt32(ReadLine());
+        WriteLine($"a sua idade {colina(ano)}");
+
+
+    }
+}
