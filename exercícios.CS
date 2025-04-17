@@ -501,3 +501,228 @@ class cool {
 
     }
 }
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------                                                                                                       CLASS 
+                                                                                          SISTEMA
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+using static System.Console;
+
+
+namespace menu
+{
+    class MainClass
+    {
+        public static void printMenu(String[] options)
+        {
+            foreach (String option in options)
+            {
+                Console.WriteLine(option);
+            }
+            Console.Write("ESCOLHA UM NOME:");
+        }
+
+
+
+        public static void Main(string[] args)
+        {
+            Console.WriteLine("<<<<<<<<<<<<<<<<<NOMES>>>>>>>>>>>>>>>>");
+            String[] options = {"1- CADASTRAR 1",
+                            "2- EDITAR 2",
+                            "3- EXCLUIR 3",
+                            "4- CARREAGAR" +
+                            "5-CARREGAR" +
+                            "6 - SAIR",
+                                };
+
+            int option = 0;
+            while (true)
+            {
+                printMenu(options);
+                try
+                {
+                    option = Convert.ToInt32(Console.ReadLine());
+                }
+                catch (System.FormatException)
+                {
+                    Console.WriteLine("Por favor, digite uma opção entre 1 e " + options.Length);
+                    continue;
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Um erro aconteceu! Tente novamente.");
+                    continue;
+                }
+                switch (option)
+                {
+                    case 1:
+                        CADASTRAR();
+                        break;
+                    case 2:
+                        EDITAR();
+                        break;
+                    case 3:
+                        EXCLUIR();
+                        break;
+                    case 4:
+                        GRAVAR();
+                        break;
+                    case 5:
+                        CARREGAR();
+                        break;
+                    case 6:
+                        Environment.Exit(0);
+                        break;
+
+                    default:
+                        Console.WriteLine("Por favor, digite uma opção entre 1 e  " + options.Length);
+                        break;
+                }
+
+            }
+        }
+        static List<string> nomes = new List<string>();
+        private static void CADASTRAR()
+        {
+            Clear();
+            WriteLine("=====================================================");
+            WriteLine("=                    cadastrar nome                 =");
+            WriteLine();
+            WriteLine("digite um nome");
+            string nome = ReadLine();
+            var repetido = nomes.Any(x => x.Contains(nome));
+            if (repetido == true)
+            {
+                WriteLine("O nome digitado ja se encontara nos nossos registros!");
+                return;
+
+            }
+            else
+            {
+                nomes.Add(nome);
+            }
+        }
+
+        private static void EDITAR()
+        {
+            Clear();
+            WriteLine("=====================================================");
+            WriteLine("=                    EDITAR NOME                    =");
+            WriteLine("=====================================================");
+            foreach (var item in nomes)
+            {
+                WriteLine(item);
+                string nome = "";
+                WriteLine("digite o nome que voce quer editar:");
+                nome = ReadLine();
+                int index = nomes.IndexOf(nome);
+                if (index >= 0)
+                {
+                    WriteLine();
+                    WriteLine($"o nome que sera editado e {nomes[index]}");
+                    WriteLine();
+                    WriteLine("digite o nome:");
+                    string novonome = ReadLine();
+                    var repetindo = nomes.Any(x => x.Contains(novonome));
+                    if (repetindo == true)
+
+                    {
+                        WriteLine($"esse nome ja conta em nosso registros!");
+                        return;
+                    }
+                    else
+                    {
+                        nomes[index] = novonome;
+                    }
+
+                    WriteLine("=====================================================");
+                    WriteLine("=                 LISTAGEM DE NOMES                 =");
+                    WriteLine("=====================================================");
+                    foreach (var o in nomes)
+                    {
+                        WriteLine(o);
+
+                    }
+                }
+            }
+        }
+        private static void EXCLUIR()
+        {
+            Clear();
+            WriteLine("=====================================================");
+            WriteLine("=                   EXCLUIR NOME                    =");
+            WriteLine("=====================================================");
+            WriteLine();
+            string nome;
+            WriteLine("digite o nome que vc quer excluir");
+            nome = ReadLine();
+            int index = nomes.IndexOf(nome);
+            if (index >= 0)
+            {
+                WriteLine();
+                WriteLine($"o nome que sera editado e {nomes[index]}");
+                WriteLine();
+                WriteLine("digite o nome:");
+                string confirmar = ReadLine();
+                if (confirmar == "s")
+                {
+                    nomes.RemoveAt(index);
+                }
+
+            }
+            WriteLine("=====================================================");
+            WriteLine("=                 LISTAGEM DE NOMES                 =");
+            WriteLine("=====================================================");
+            foreach (var o in nomes)
+            {
+                WriteLine(o);
+
+            }
+        }
+        private static void GRAVAR()
+        {
+            Clear();
+            WriteLine("=====================================================");
+            WriteLine("=                   GRAVAR NO ARQUIVO               =");
+            WriteLine("=====================================================");
+            WriteLine();
+
+            try
+            {
+                StreamWriter DADOSNOMES;
+                string arq = @"C\NOMES\nomes.txt";
+                DADOSNOMES = File.CreateText(arq);
+                foreach (var item in nomes)
+                {
+                    DADOSNOMES.WriteLine($"{item}");
+                }
+                DADOSNOMES.Close();
+            }
+            catch (Exception e)
+            {
+                WriteLine($"{e.Message}");
+
+            }
+            finally
+            {
+                WriteLine("<<<<<dados gravados com sucesso!>>>>>>>>>");
+            }
+        }
+        private static void CARREGAR()
+        {
+            Clear();
+            WriteLine("=============================================");
+            WriteLine("=              LER ARQUIVO                  =");
+            WriteLine("=============================================");
+            WriteLine();
+            var nome = File.ReadAllLines(@"C:\NOMES\NOMES.txt");
+            for (int i = 0; i < nome.Length; i++)
+            {
+                nomes.Add(nome[i]);
+            }
+            WriteLine("<<<<<<< LEITURA REALIZADA COM SUCESSO! >>>>>>>");
+        }
+    }
+}
