@@ -1,0 +1,37 @@
+namespace WinFormsApp1
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            lblPalavra.Text = txtPalavra.Text.Trim();
+            txtPalavra.Text = string.Empty;
+            this.ActiveControl = txtPalavra;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            this.ActiveControl = txtPalavra;
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void txtPalavra_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
