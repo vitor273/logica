@@ -14,7 +14,7 @@ namespace enois
     {
         public frncpf()
         {
-            InitializeComponent();
+ 
         }
     }
 }

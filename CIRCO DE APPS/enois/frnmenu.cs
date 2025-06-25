@@ -11,5 +11,16 @@ namespace enois
         {
 
         }
+
+        private void bpxSair_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void pbxCep_Click(object sender, EventArgs e)
+        {
+            frnbuscacep frnbuscacep = new frnbuscacep();
+            frnbuscacep.Show();
+        }
     }
 }

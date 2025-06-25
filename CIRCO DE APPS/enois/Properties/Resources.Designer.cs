@@ -63,6 +63,26 @@ namespace enois.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap app_de_clima {
+            get {
+                object obj = ResourceManager.GetObject("app-de-clima", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap calculadora {
+            get {
+                object obj = ResourceManager.GetObject("calculadora", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap carro {
             get {
                 object obj = ResourceManager.GetObject("carro", resourceCulture);
@@ -103,9 +123,29 @@ namespace enois.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cpf {
+            get {
+                object obj = ResourceManager.GetObject("cpf", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap moeda_logo_icon_design_da_chama_125199043_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("moeda_logo_icon_design_da_chama_125199043_removebg_preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap saida_de_emergencia {
+            get {
+                object obj = ResourceManager.GetObject("saida-de-emergencia", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
